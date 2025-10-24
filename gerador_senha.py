@@ -5,9 +5,11 @@ letras_mins = string.ascii_lowercase
 letras_maius = string.ascii_uppercase
 numeros = string.digits
 simbolos = string.punctuation
-todos = letras_mins + letras_maius + numeros + simbolos
+todos = "".join(([letras_mins, letras_maius, numeros, simbolos]))
 
 solicitacao_usuario = int(input("Digite o tamanho da senha: "))
+
+# definir essas atribuições como 'def zerar_variaveis()'
 i = 0
 senha = ""
 validacao_letras_mins = False
@@ -39,12 +41,14 @@ while i <= solicitacao_usuario:
         )
 
         if validacao_senha:
-            print("Senha validada!")
+            print(f"Senha validada --> {senha}")
             break
         else:
-            print("Senha invalida")
             tentativas += 1
-            if tentativas == 20:
+            if tentativas == 40:
+                print(
+                    f"Numero de tentativas chegou ao limite. Tente novamente com um tamanho maior (pelo menos 10)."
+                )
                 break
             validacao_letras_mins = False
             validacao_letras_maius = False
@@ -57,8 +61,6 @@ while i <= solicitacao_usuario:
     senha += caracter_random
     i += 1
 
-
-print(f"Senha: {senha}")
 
 # Caso necessário embaralhar a senha:
 # senha_embaralhada = list(senha)
