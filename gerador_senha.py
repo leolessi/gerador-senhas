@@ -1,16 +1,4 @@
-"""
-Programa para gerar senhas de pelo menos 10 digitos.
-As senhas, necessariamente, conterão:
-    1 letra minúsucla
-    1 letra maiúscula
-    1 número
-    1 caractere especial
 
-OBS: Melhorias futuras/próximas:
-    -> Dividir por funções
-    -> Exigir pelo menos duas letras maiúsculas, duas minúsculas, dois símbolos e dois números
-    -> Otimizações gerais
-"""
 
 import random
 import string
