@@ -1,5 +1,3 @@
-
-
 import random
 import string
 
@@ -60,5 +58,12 @@ while i <= solicitacao_usuario:
     i += 1
 
 
-print(senha)
+print(f"Senha: {senha}")
+
+# Caso necessário embaralhar a senha:
+# senha_embaralhada = list(senha)
+# random.shuffle(senha_embaralhada)
+# senha_embaralhada = "".join(senha_embaralhada)
+# print(f"Senha embaralhada: {senha_embaralhada}")
+
 print(f"Tentativas = {tentativas}")
