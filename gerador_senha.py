@@ -15,12 +15,12 @@ solicitacao_usuario = int(input("Digite o tamanho da senha (mínimo 8): "))
 def gerar_senha(tamanho_senha):
     senha_base = [
         random.choice(string.ascii_lowercase),
-        random.choice(string.ascii_lowercase),
         random.choice(string.ascii_uppercase),
-        random.choice(string.ascii_uppercase),
-        random.choice(string.digits),
         random.choice(string.digits),
         random.choice(string.punctuation),
+        random.choice(string.ascii_lowercase),
+        random.choice(string.ascii_uppercase),
+        random.choice(string.digits),
         random.choice(string.punctuation),
     ]
 
